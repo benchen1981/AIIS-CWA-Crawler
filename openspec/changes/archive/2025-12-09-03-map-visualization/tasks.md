@@ -1,0 +1,12 @@
+- [x] Data Layer Updates <!-- id: 70 -->
+    - [x] Research/Debug `O-A0003-001` structure (Lat/Lon availability) <!-- id: 71 -->
+    - [x] Update `etl.py` to fetch City/Station data <!-- id: 72 -->
+    - [x] Update `database.py` schema (add lat/lon) <!-- id: 73 -->
+    - [x] Reset/Migration DB <!-- id: 74 -->
+- [x] UI Layer (Map) <!-- id: 80 -->
+    - [x] Implement Map Component (PyDeck/Streamlit Map) <!-- id: 81 -->
+    - [x] Add tooltips/hover effects <!-- id: 82 -->
+    - [x] Integrate into `app.py` layout <!-- id: 83 -->
+- [x] Verification <!-- id: 90 -->
+    - [x] Verify map points match real geography <!-- id: 91 -->
+    - [x] Verify functionality (hover/click) <!-- id: 92 -->

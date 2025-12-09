@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# Streamlit
+.streamlit/
+!/openspec
+
+# OS
+.DS_Store
+
+# Project specific
+data.db
+debug_*.py
+verify_db.py
+check_locations.py

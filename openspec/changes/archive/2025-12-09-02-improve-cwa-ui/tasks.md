@@ -1,0 +1,8 @@
+- [x] Update Streamlit CSS <!-- id: 40 -->
+    - [x] Inject custom CWA-themed styles <!-- id: 41 -->
+    - [x] Style headers and table rows <!-- id: 42 -->
+- [x] Refine Table Presentation <!-- id: 50 -->
+    - [x] Rename columns to match CWA explicitly <!-- id: 51 -->
+    - [x] Adjust table width/layout <!-- id: 52 -->
+- [x] Verify UI <!-- id: 60 -->
+    - [x] Check against CWA screenshot <!-- id: 61 -->

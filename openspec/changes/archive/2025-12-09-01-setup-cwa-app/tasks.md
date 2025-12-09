@@ -1,0 +1,13 @@
+- [x] Data Layer Implementation <!-- id: 10 -->
+    - [x] Create `database.py` with `init_db` and schema <!-- id: 11 -->
+    - [x] Create `etl.py` to fetch F-A0010-001 JSON <!-- id: 12 -->
+    - [x] Implement parsing logic to extract temp/location <!-- id: 13 -->
+    - [x] Implement `save_weather_data` to SQLite <!-- id: 14 -->
+- [x] UI Layer Implementation <!-- id: 20 -->
+    - [x] Create `app.py` skeleton <!-- id: 21 -->
+    - [x] Implement data loading from SQLite <!-- id: 22 -->
+    - [x] Render data table in Streamlit <!-- id: 23 -->
+    - [x] Apply CWA-like styling (CSS) <!-- id: 24 -->
+- [x] Verification <!-- id: 30 -->
+    - [x] Verify data accuracy against CWA website <!-- id: 31 -->
+    - [x] Validated UI layout <!-- id: 32 -->
