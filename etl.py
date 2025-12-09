@@ -9,13 +9,14 @@ DATASET_ID = 'O-A0003-001'
 API_URL = f"https://opendata.cwa.gov.tw/fileapi/v1/opendataapi/{DATASET_ID}?Authorization={API_KEY}&downloadType=WEB&format=JSON"
 
 def fetch_data():
-    try:
-        response = requests.get(API_URL, timeout=10) # Added timeout
-        response.raise_for_status()
-        return response.json()
-    except requests.RequestException as e:
-        print(f"Error fetching data: {e}")
-        return None
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+        'Accept': 'application/json'
+    }
+    # Do not catch exceptions here; let run_etl catch them so we get the specific error message
+    response = requests.get(API_URL, headers=headers, timeout=20)
+    response.raise_for_status()
+    return response.json()
 
 # ... (parse_data remains the same)
 
