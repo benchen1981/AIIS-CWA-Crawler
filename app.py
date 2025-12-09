@@ -75,16 +75,22 @@ def main():
     with cols[1]:
         if st.button("更新資料 (Refresh)"):
             with st.spinner('Downloading and Processing data...'):
-                run_etl()
-            st.success('Data updated!')
-            st.rerun()
+                status = run_etl()
+            if status == "Success":
+                st.success('Data updated!')
+                st.rerun()
+            else:
+                st.error(f"Update failed: {status}")
 
     data = get_weather_data()
     
     if not data:
         with st.spinner('Initial data fetch...'):
-            run_etl()
-            data = get_weather_data()
+            status = run_etl()
+            if status == "Success":
+                data = get_weather_data()
+            else:
+                st.error(f"Automatic data fetch failed: {status}")
     
     if not data:
         st.warning("目前無資料，請點擊「更新資料」。")
