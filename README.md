@@ -5,6 +5,21 @@ A Python-based web application that crawls, stores, and visualizes real-time wea
 🌟[App Screenshot](https://github.com/benchen1981/AIIS-CWA-Crawler/assets/placeholder.png)
 *(Note: You can update this screenshot link after uploading images to your repo)*
 
+## ======================================================================================================
+## Prompt Task : 中央氣象局(CWA)資料爬蟲+
+* API 金鑰 : CWA-1FFDDAEC-161F-46A3-BE71-93C32C52829F
+* 網站資料頁：https://opendata.cwa.gov.tw/dataset/forecast/F-A0010-001
+* JSON 下載網址： 
+https://opendata.cwa.gov.tw/fileapi/v1/opendataapi/F-A0010-001? Authorization=CWA-1FFDDAEC-161F-46A3-BE71-93C32C52829F &downloadType=WEB &format=JSON
+* 要求 : 
+1. 使用 Python開發
+2. 使用 API 下載中央氣象局 JSON 資料
+3. SQLite 資料庫名稱：data.db
+4. 依 JSON 結構取出解析資料：取出各地區的溫度，解析後的資料「存
+5. 資料表依JSON 資料分類排序
+6. 建立一個本地 Streamlit App，顯示從 SQLite 讀出的資料表格，並正確顯示於地圖，依縣市分組詳細資料列表。
+## ======================================================================================================
+
 ## 🌟 Features
 
 *   **Real-time Data ETL**: Fetches the latest live observation data (`O-A0003-001`) from CWA Open Data API.
