@@ -1,10 +1,13 @@
 import sqlite3
 import os
 
-DB_NAME = 'data.db'
+# Use absolute path to ensure Streamlit finds the right DB
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_NAME = os.path.join(BASE_DIR, 'data.db')
 
 def get_db_connection():
-    conn = sqlite3.connect(DB_NAME)
+    # check_same_thread=False is needed for Streamlit's threading model
+    conn = sqlite3.connect(DB_NAME, check_same_thread=False)
     conn.row_factory = sqlite3.Row
     return conn
 
@@ -55,8 +58,8 @@ def get_weather_data():
         c.execute('SELECT * FROM weather_data ORDER BY city, town')
         rows = c.fetchall()
         return [dict(row) for row in rows]
-    except sqlite3.OperationalError:
-        # Table might not exist yet if ETL hasn't run
+    except sqlite3.OperationalError as e:
+        print(f"Database error: {e}")
         return []
     finally:
         conn.close()
