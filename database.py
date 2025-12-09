@@ -51,7 +51,12 @@ def save_weather_data(data_list):
 def get_weather_data():
     conn = get_db_connection()
     c = conn.cursor()
-    c.execute('SELECT * FROM weather_data ORDER BY city, town')
-    rows = c.fetchall()
-    conn.close()
-    return [dict(row) for row in rows]
+    try:
+        c.execute('SELECT * FROM weather_data ORDER BY city, town')
+        rows = c.fetchall()
+        return [dict(row) for row in rows]
+    except sqlite3.OperationalError:
+        # Table might not exist yet if ETL hasn't run
+        return []
+    finally:
+        conn.close()
