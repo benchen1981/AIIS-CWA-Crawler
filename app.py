@@ -134,8 +134,13 @@ def main():
                 pitch=0
             )
 
+            # Ensure coordinates are numeric
+            df['latitude'] = pd.to_numeric(df['latitude'], errors='coerce')
+            df['longitude'] = pd.to_numeric(df['longitude'], errors='coerce')
+            df = df.dropna(subset=['latitude', 'longitude'])
+
             st.pydeck_chart(pdk.Deck(
-                map_style="mapbox://styles/mapbox/light-v9",
+                map_style=None, # Use default style to avoid token issues
                 initial_view_state=view_state,
                 layers=[layer],
                 tooltip={
