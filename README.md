@@ -6,7 +6,7 @@ A Python-based web application that crawls, stores, and visualizes real-time wea
 *(Note: You can update this screenshot link after uploading images to your repo)*
 
 ## ===============================================================
-## Prompt Task : 中央氣象局(CWA)資料爬蟲+
+## Prompt Task : 中央氣象局(CWA)資料爬蟲 + Streamlit App
 * API 金鑰 : CWA-1FFDDAEC-161F-46A3-BE71-93C32C52829F
 * 網站資料頁：https://opendata.cwa.gov.tw/dataset/forecast/F-A0010-001
 * JSON 下載網址： 
@@ -90,3 +90,4 @@ This application uses the **Automatic Weather Station (AWS)** dataset (`O-A0003-
 ## 📝 License
 
 This project is created for educational purposes (Lecture 14 Practice).
+
