@@ -2,7 +2,7 @@
 
 A Python-based web application that crawls, stores, and visualizes real-time weather data from the [Central Weather Administration (CWA)](https://www.cwa.gov.tw/) of Taiwan. Built with **Streamlit** and **PyDeck**, this app provides an interactive map and detailed observation data mimicking the visual style of the official CWA website.
 
-![App Screenshot](https://github.com/benchen1981/AIIS-CWA-Crawler/assets/placeholder.png)
+🌟[App Screenshot](https://github.com/benchen1981/AIIS-CWA-Crawler/assets/placeholder.png)
 *(Note: You can update this screenshot link after uploading images to your repo)*
 
 # =================================================================
