@@ -5,29 +5,10 @@ A Python-based web application that crawls, stores, and visualizes real-time wea
 🌟[App Screenshot](https://github.com/benchen1981/AIIS-CWA-Crawler/assets/placeholder.png)
 *(Note: You can update this screenshot link after uploading images to your repo)*
 
-# =================================================================
-## Prompt Task to Agent :
-* 中央氣象局(CWA) HTML 版溫度 資料爬蟲
-* 中央氣象局 : https://www.cwa.gov.tw/V8/C/W/OBS_Temp.html
-* CWA 登入頁 : https://opendata.cwa.gov.tw/userLogin
-* API 金鑰: CWA-1FFDDAEC-161F-46A3-BE71-93C32C52829F
-* 教學使用的 JSON Dataset（F-A0010-001）
-* 網站資料頁：
-* https://opendata.cwa.gov.tw/dataset/forecast/F-A0010-001
-* JSON 下載網址 : https://opendata.cwa.gov.tw/fileapi/v1/opendataapi/F-A0010-001?Authorization=CWA-6FAB2E54-79BE-438F-8453-B059902602DC&downloadType=WEB&format=JSON
-* 要求(Part 1)
-1. 使用 Python 建立
-2. 使用API 下載中央氣象局 F-A0010-001 JSON 資料
-3. 解析資料：取出各地區的溫度
-4. 設計 SQLite 資料庫(data.db)，資料庫名稱：data.db，資料表：依原始資料排序及優化，把解析後的資料「存進 SQLite3」
-5. Streamlit App，並顯示從 SQLite 讀出的資料表格。
-6. Web UI 參照 : https://www.cwa.gov.tw/V8/C/W/OBS_Temp.html
-# =================================================================
-
-
 ## 🌟 Features
 
 *   **Real-time Data ETL**: Fetches the latest live observation data (`O-A0003-001`) from CWA Open Data API.
+*   **Auto-Initialization**: Automatically creates the database and fetches fresh data on startup if no local data exists (optimized for Cloud deployments).
 *   **Local Storage**: Parses and stores weather data (Temperature, Date, Location) in a local `SQLite` database.
 *   **Interactive Map**: Visualizes weather stations across Taiwan using `PyDeck`.
     *   Markers colored by temperature intensity (Cool to Hot).
