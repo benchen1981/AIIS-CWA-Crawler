@@ -82,6 +82,11 @@ def main():
     data = get_weather_data()
     
     if not data:
+        with st.spinner('Initial data fetch...'):
+            run_etl()
+            data = get_weather_data()
+    
+    if not data:
         st.warning("目前無資料，請點擊「更新資料」。")
     else:
         df = pd.DataFrame(data)
