@@ -8,13 +8,19 @@ API_KEY = 'CWA-1FFDDAEC-161F-46A3-BE71-93C32C52829F'
 DATASET_ID = 'O-A0003-001'
 API_URL = f"https://opendata.cwa.gov.tw/fileapi/v1/opendataapi/{DATASET_ID}?Authorization={API_KEY}&downloadType=WEB&format=JSON"
 
+import urllib3
+
+# Suppress only the single warning from urllib3 needed.
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
 def fetch_data():
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
         'Accept': 'application/json'
     }
     # Do not catch exceptions here; let run_etl catch them so we get the specific error message
-    response = requests.get(API_URL, headers=headers, timeout=20)
+    # verify=False fixes the SSLError: [SSL: CERTIFICATE_VERIFY_FAILED]
+    response = requests.get(API_URL, headers=headers, timeout=20, verify=False)
     response.raise_for_status()
     return response.json()
 
