@@ -7,15 +7,15 @@ A Python-based web application that crawls, stores, and visualizes real-time wea
 
 # =================================================================
 ## Prompt Task to Agent :
-中央氣象局(CWA) HTML 版溫度 資料爬蟲
-中央氣象局 : https://www.cwa.gov.tw/V8/C/W/OBS_Temp.html
-CWA 登入頁 : https://opendata.cwa.gov.tw/userLogin
- API 金鑰: CWA-1FFDDAEC-161F-46A3-BE71-93C32C52829F
-教學使用的 JSON Dataset（F-A0010-001）
-網站資料頁：
-https://opendata.cwa.gov.tw/dataset/forecast/F-A0010-001
-JSON 下載網址 : https://opendata.cwa.gov.tw/fileapi/v1/opendataapi/F-A0010-001?Authorization=CWA-6FAB2E54-79BE-438F-8453-B059902602DC&downloadType=WEB&format=JSON
-要求(Part 1)
+*中央氣象局(CWA) HTML 版溫度 資料爬蟲
+*中央氣象局 : https://www.cwa.gov.tw/V8/C/W/OBS_Temp.html
+*CWA 登入頁 : https://opendata.cwa.gov.tw/userLogin
+*API 金鑰: CWA-1FFDDAEC-161F-46A3-BE71-93C32C52829F
+*教學使用的 JSON Dataset（F-A0010-001）
+*網站資料頁：
+*https://opendata.cwa.gov.tw/dataset/forecast/F-A0010-001
+*JSON 下載網址 : https://opendata.cwa.gov.tw/fileapi/v1/opendataapi/F-A0010-001?Authorization=CWA-6FAB2E54-79BE-438F-8453-B059902602DC&downloadType=WEB&format=JSON
+*要求(Part 1)
 1. 使用 Python 建立
 2. 使用API 下載中央氣象局 F-A0010-001 JSON 資料
 3. 解析資料：取出各地區的溫度
